@@ -1,83 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-
-    <title>bs4 todo list - Bootdey.com</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tarefas</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon"/>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-white">
-            <div class="card-body">
-              <form action="javascript:void(0);">
-                <input
-                  type="text"
-                  class="form-control add-task"
-                  placeholder="Tarefa:"
-                />
-              </form>
-              <ul class="nav nav-pills todo-nav">
-                <li role="presentation" class="nav-item all-task active">
-                  <a href="#" class="nav-link">Todos</a>
-                </li>
-                <li role="presentation" class="nav-item active-task">
-                  <a href="#" class="nav-link">Ativos</a>
-                </li>
-                <li role="presentation" class="nav-item completed-task">
-                  <a href="#" class="nav-link">Completados</a>
-                </li>
-              </ul>
-              <div class="todo-list">
-                <div class="todo-item">
-                  <div class="checker">
-                    <span class><input type="checkbox" /></span>
-                  </div>
-                  <span>Limpar casa</span>
-                  <a
-                    href="javascript:void(0);"
-                    class="float-right remove-todo-item"
-                    ><i class="icon-close"></i
-                  ></a>
-                </div>
-                <div class="todo-item">
-                  <div class="checker">
-                    <span class><input type="checkbox" /></span>
-                  </div>
-                  <span>Fazer atividade</span>
-                  <a
-                    href="javascript:void(0);"
-                    class="float-right remove-todo-item"
-                    ><i class="icon-close"></i
-                  ></a>
-                </div>
-                <div class="todo-item">
-                  <div class="checker">
-                    <span class><input type="checkbox" /></span>
-                  </div>
-                  <span>Outros</span>
-                  <a
-                    href="javascript:void(0);"
-                    class="float-right remove-todo-item"
-                    ><i class="icon-close"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1>Lista de tarefas</h1>
+    <div>
+    <form name="form_main">
+      <label for="task">Tarefa: </label>
+      <input type="text" name="task" id="task" /> <br />
+      <button type="button" onclick="addTarefa()">Add</button>
+    </form>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <fieldset>
+      <legend>Tarefas:</legend>
+      <ul>
+        <li>Limpar casa</li>
+        <li>Outras</li>
+      </ul>
+    </fieldset>
+
+  </div>
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
