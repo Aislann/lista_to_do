@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <title>Tarefas</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon"/>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon-32x32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <h1>Lista de tarefas</h1>
-    <div>
-    <form name="form_main">
-      <label for="task">Tarefa: </label>
-      <input type="text" name="task" id="task" /> <br />
-      <button type="button" onclick="addTarefa()">Add</button>
-    </form>
-
-    <fieldset>
-      <legend>Tarefas:</legend>
-      <ul>
-        <li>Limpar casa</li>
-        <li>Outras</li>
-      </ul>
-    </fieldset>
-
-  </div>
+    <div class="card">
+      <h1>To Do List</h1>
+      <div class="adcionaTarefas">
+        <form name="form_main">
+          <input type="text" name="task" id="task" placeholder="Adcione uma Tarefa"/>
+          <button type="button" onclick="addTarefa()" id="submit"><img src="assets/img/add-button-svgrepo-com (1).svg" alt=""></button>
+        </form>
+      </div>
+      <div class="listaTarefas">
+          <ul>
+            <li>Limpar casa</li>
+            <li>Outras</li>
+          </ul>
+      </div>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
