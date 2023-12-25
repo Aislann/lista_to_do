@@ -14,19 +14,23 @@
     />
   </head>
   <body>
-    <div class="card">
-      <h1>To Do List</h1>
-      <div class="adcionaTarefas">
-        <form name="form_main">
-          <input type="text" name="task" id="task" placeholder="Adcione uma Tarefa"/>
-          <button type="button" onclick="addTarefa()" id="submit"><img src="assets/img/add-button-svgrepo-com (1).svg" alt=""></button>
-        </form>
-      </div>
-      <div class="listaTarefas">
+    <div class="backgroundAnimado">
+      <div class="card">
+        <h1>To Do List</h1>
+        <div class="adcionaTarefas">
+          <form name="form_main">
+            <input type="text" name="task" id="task" placeholder="Adcione uma Tarefa"/>
+            <button type="button" onclick="addTarefa(event)" id="submit">
+              <img src="assets/img/add-button-svgrepo-com (1).svg" alt="" />
+            </button>
+          </form>
+        </div>
+        <div class="listaTarefas">
           <ul>
             <li>Limpar casa</li>
             <li>Outras</li>
           </ul>
+        </div>
       </div>
     </div>
     <script src="assets/js/script.js"></script>

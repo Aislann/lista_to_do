@@ -19,21 +19,27 @@ document.querySelector('ul').addEventListener('click', (e) => {
         e.target.classList.toggle('checked')
 })
 
-function addTarefa()
+function addTarefa(event)
 {
+    event.preventDefault() // Evitar que a págine se reinicie ao pressionar ENTER
+
     let li = document.createElement('LI')
     let tarefa = document.form_main.task.value
     let caixaTarefa = document.createTextNode(tarefa) // pra criar sempre embaixo da ultima tag
     
     li.appendChild(caixaTarefa) // Texto foi criado e entra como lista
+
+    botaoFechar(li); // Chama novamente a função
+    
     document.querySelector('ul').appendChild(li) // Essa lista desordenada vai receber o elemento filho
     document.form_main.task.value = "" // Após limpa o input
 
-    botaoFechar(li); // Chama novamente a função
-
 }
 
-document.addEventListener("keypress", function(e) {
+document.form_main.addEventListener('submit',addTarefa)
+
+//Funcionamento do botão ao rressionar ENTER
+document.addEventListener("submit", function(e) {
     if(e.key === "Enter") {
         const btn = document.querySelector("#submit");
         btn.click();
