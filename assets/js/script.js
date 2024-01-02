@@ -38,7 +38,7 @@ function addTarefa(event)
 
 document.form_main.addEventListener('submit',addTarefa)
 
-//Funcionamento do botão ao rressionar ENTER
+//Funcionamento do botão ao pressionar ENTER
 document.addEventListener("submit", function(e) {
     if(e.key === "Enter") {
         const btn = document.querySelector("#submit");
